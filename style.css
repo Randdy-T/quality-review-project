@@ -51,3 +51,13 @@ li {
     align-items: center;
     border-radius: 4px;
 }
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: #cc0000;
+}
