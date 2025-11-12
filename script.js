@@ -1,0 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const taskForm = document.getElementById('task-form');
+    const taskInput = document.getElementById('task-input');
+    const taskList = document.getElementById('task-list');
+
+    taskForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche le rechargement de la page
+
+        const taskText = taskInput.value.trim();
+
+        if (taskText) {
+            addTask(taskText);
+            taskInput.value = ''; // Vide le champ de saisie
+            taskInput.focus();
+        }
+    });
+
+    function addTask(text) {
+        const listItem = document.createElement('li');
+        listItem.textContent = text;
+        taskList.appendChild(listItem);
+    }
+});
